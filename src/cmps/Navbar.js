@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreator from '../store/actions/actions'
-// import utilService from '../services/util.service';
 
 function Navbar(props) {
     return (
@@ -26,7 +25,6 @@ function mapStateToProps(state) {
   function mapDispatchToProps(dispatch) {
     return {
         onAddMovieClick: () => {
-            // const id = utilService.makeId(6)
             dispatch(actionCreator.selectMovie(null))
         }
     }
