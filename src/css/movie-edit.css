@@ -1,0 +1,74 @@
+.movie-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.movie-edit form {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-edit form .wrapper {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-edit form div {
+    width: 70vw;
+}
+
+@media (min-width: 768px) {
+    .movie-edit {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .modal-screen {
+        position: absolute;
+        background-color: gray;
+        opacity: 0.8;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .movie-edit form {
+        background-color: white;
+        opacity: 1;
+        z-index: 1;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    
+    
+    .movie-edit form .wrapper {
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .movie-edit form div {
+        width: 200px;
+    }
+}
+    
+    

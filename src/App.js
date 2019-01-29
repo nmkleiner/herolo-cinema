@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import Navbar from './cmps/Navbar';
+import store from './store/store';
+import * as actionCreator from './store/actions/actions'
 import './App.css';
+import MoviesPage from './views/movies-page.js';
+// import {Router} from 'react-router-dom';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.onLoad()
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+      {this.props.movies &&
+        // <Router>
+          <div className="App">
+              <Navbar store={store}/>
+              <MoviesPage store={store}/>
+          </div>
+        // </Router>
+      }
+    </React.Fragment>
     );
   }
 }
 
-export default App;
+
+function mapStateToProps(state) {
+  return {
+      movies: state.movies
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+      onLoad: () => {
+          dispatch(actionCreator.loadMovies())
+      }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
