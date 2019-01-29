@@ -20,11 +20,15 @@ class MoviePreview extends Component {
                 })}</p>
                 <p>director: {movie.director}</p>
                 <Button
+                    variant="text"
+                    color="default"
                     onClick={this.props.onEditClick.bind({},movie.id)}
-                >
+                    >
                 edit
                 </Button>   
                 <Button
+                    variant="text"
+                    color="default"
                     onClick={this.props.onDeleteMovieClick.bind({},movie.id)}
                 >
                 delete

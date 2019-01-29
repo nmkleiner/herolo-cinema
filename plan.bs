@@ -1,2 +1,15 @@
 couldn't get done:
     -make select in edit have gray text 
+
+wednesday:
+    -pop-up to validate delete
+    -prevent double occurence by title
+    -format titles
+    -design navbar
+    -design movie page
+    -design movie preview
+
+
+
+    V-color to btns
+    V-design edit

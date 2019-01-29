@@ -16,6 +16,7 @@ class MovieEdit extends Component {
         super()
         this.state = {
             selectedMovie: props.selectedMovie,
+            isClosing: false
         }
 
         this.state.textFields = [{
@@ -124,16 +125,27 @@ class MovieEdit extends Component {
             textFields[num].error = true
             this.setState({textFields})
         }
-        // textFields[num].error = true
         return isError
     }
     
     render() {
         const movie = this.state.selectedMovie
         return (
-            <div className="movie-edit capitalize animate slideInUp">
+                <div 
+                    className={
+                        this.state.isClosing?
+                        'movie-edit capitalize animated fadeOut' :  
+                        'movie-edit capitalize animated fadeIn'
+                    }
+                >
                 <div className="modal-screen"></div>
-                <form onSubmit={this.props.onSubmit.bind(this)}>
+                <form onSubmit={this.props.onSubmit.bind(this)}
+                    className={
+                        this.state.isClosing?
+                        'animated fadeOutRight' :  
+                        'animated fadeInRight'
+                    }
+                >
                     {
                         this.state.addMovie? 
                         <h3>Add new movie</h3>:
@@ -148,7 +160,6 @@ class MovieEdit extends Component {
                                             value={movie[field.name]}
                                             onChange={field.onChange.bind(this,field.name)}
                                             placeholder={field.placeholder}
-                                            // label={field.error && field.label}
                                             helperText={field.error && field.label}
                                             error={field.error}
                                             key={idx}
@@ -156,7 +167,6 @@ class MovieEdit extends Component {
                                         </TextField>
                             } 
                             else return <FormControl key={idx} error={field.error}>
-                                            {/* <InputLabel htmlFor="genre">Genre</InputLabel> */}
                                             <Select
                                             value={movie[field.name]}
                                             onChange={field.onChange.bind(this,field.name)}
@@ -165,7 +175,6 @@ class MovieEdit extends Component {
                                                         name: 'genre',
                                                         id: 'genre',
                                                       }}
-                                            // input={<Input placeholder="Genre"/>}
                                             >
                                             <MenuItem value="" disabled>
                                                 Genre
@@ -181,50 +190,10 @@ class MovieEdit extends Component {
                                                 <FormHelperText>Choose genre.</FormHelperText>
                                             }
                                         </FormControl> 
-                                    //     <FormControl className={classes.formControl}>
-                                    //     <InputLabel htmlFor="age-simple">Age</InputLabel>
-                                    //     <Select
-                                    //       value={this.state.age}
-                                    //       onChange={this.handleChange}
-                                    //       inputProps={{
-                                    //         name: 'age',
-                                    //         id: 'age-simple',
-                                    //       }}
-                                    //     >
-                                    //       <MenuItem value="">
-                                    //         <em>None</em>
-                                    //       </MenuItem>
-                                    //       <MenuItem value={10}>Ten</MenuItem>
-                                    //       <MenuItem value={20}>Twenty</MenuItem>
-                                    //       <MenuItem value={30}>Thirty</MenuItem>
-                                    //     </Select>
-                                    //   </FormControl>
-                            // <Select
-                            //                 // select
-                            //                 value={movie[field.name]}
-                            //                 onChange={field.onChange.bind(this,field.name)}
-                            //                 // label={field.error && field.label}
-                            //                 // error={field.error}
-                            //                 key={idx}
-                            //                 multiple
-                            //                 inputProps={{error: true}}
-                            //                 // SelectProps={{displayEmpty: true, multiple: true, label: 'choose genre'}}
-                            //                 // margin="normal"
-                                            
-                            //                 >
-                            //                 <MenuItem className="default-value" value='' disabled>
-                            //                     choose genres
-                            //                 </MenuItem>
-                            //                 {field.genres.map(genre => (
-                            //                     <MenuItem key={genre} value={genre}>
-                            //                         {genre}
-                            //                     </MenuItem>
-                            //                 ))}
-                            //             </Select>
                         })}
                         <div className="flex justify-center">
-                            <Button type="submit">save</Button>
-                            <Button type="button" onClick={this.props.onClose}>close</Button>
+                            <Button variant="outlined" size="large" color="primary" type="submit">save</Button>
+                            <Button variant="outlined" size="large" color="default" type="button" onClick={this.props.onClose.bind(this)}>close</Button>
                         </div>
                     </div>
                 </form>
@@ -254,11 +223,17 @@ function mapDispatchToProps(dispatch) {
                 else {
                     dispatch(actionCreator.updateMovie(this.state.selectedMovie))
                 }
-                dispatch(actionCreator.unSelectMovie())
+                await this.setState({isClosing: true})
+                setTimeout(() => {
+                    dispatch(actionCreator.unSelectMovie())
+                },700)
             }
         },
-        onClose: () => {
-            dispatch(actionCreator.unSelectMovie())
+        onClose: async function() {
+            await this.setState({isClosing: true})
+            setTimeout(() => {
+                dispatch(actionCreator.unSelectMovie())
+            },700)
         }
     }
 }
