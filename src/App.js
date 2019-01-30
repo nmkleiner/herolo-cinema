@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navbar from './cmps/Navbar';
 import store from './store/store';
 import * as actionCreator from './store/actions/actions'
-import './App.css';
+import DeleteMsg from './cmps/delete-msg';
+import Navbar from './cmps/navbar';
 import MoviesPage from './views/movies-page.js';
-// import {Router} from 'react-router-dom';
+import Footer from './cmps/footer';
 
 class App extends Component {
   componentDidMount() {
@@ -14,16 +14,12 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-      {this.props.movies &&
-        // <Router>
           <div className="App">
-              <Navbar store={store}/>
-              <MoviesPage store={store}/>
+            <DeleteMsg/>
+            <Navbar store={store} />
+            <MoviesPage store={store} />
+            <Footer/>
           </div>
-        // </Router>
-      }
-    </React.Fragment>
     );
   }
 }
@@ -31,15 +27,16 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-      movies: state.movies
+    movies: state.movies,
+    isDeleteMsgOpen: state.isDeleteMsgOpen
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-      onLoad: () => {
-          dispatch(actionCreator.loadMovies())
-      }
+    onLoad: () => {
+      dispatch(actionCreator.loadMovies())
+    }
   }
 }
 

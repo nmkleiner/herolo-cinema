@@ -2,14 +2,22 @@ couldn't get done:
     -make select in edit have gray text 
 
 wednesday:
-    -pop-up to validate delete
-    -prevent double occurence by title
-    -format titles
-    -design navbar
-    -design movie page
-    -design movie preview
+    -favicon - flaticon
+    -finish design movie preview
 
 
-
+    V-some text in top wrapper
+    V-mui progress somewhere
+    V-fontawesome in btns
+    V-mui chips for preview
+    V-footer
+    V-pop-up to validate delete mui snackbar
+    V-format titles
+    V-design movie page
+    V-look at pixel-perfect project for design reference
+    V-btns: כפתורים בעריכה יהיו בולטים, כפתור הוספה יהיה באמצע
+    V-webpage title and 
+    V-design navbar
+    V-prevent double occurence by title
     V-color to btns
     V-design edit

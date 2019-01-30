@@ -5,6 +5,56 @@ h3 {
     font-family: 'roboto';
 }
 
+h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'roboto';
+    color: #003030
+}
+
+p {
+    font-family: 'Lato', monospace;
+    color: #606060;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+small {
+    font-size: 0.8rem;
+    color: silver;
+}
+
 .gray-text {
     color: gray;
+}
+
+/* 576
+768
+992
+1200 */
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+.inner-container {
+    width: 80vw;
+    margin: 0 auto;
+}
+@media (min-width: 992px) {
+    .container {
+        width: 800px;
+    }
+    .inner-container {
+        width: 700px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 900px;
+    }
+    .inner-container {
+        width: 800px;
+    }
 }

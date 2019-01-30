@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.movie-edit h3 {
+    text-align: center;
+}
+
 .movie-edit form {
     background-color: white;
     width: 100%;
@@ -13,6 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .movie-edit form .wrapper {

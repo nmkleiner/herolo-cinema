@@ -4,6 +4,8 @@ import utilService from '../../services/util.service';
 const initialState = {
     movies: [],
     selectedMovie: {},
+    isDeleteMsgOpen: false,
+    deletedMovie: {id: ''}
 }
 
 const movieReducer = (state = initialState, action) => {
@@ -13,8 +15,8 @@ const movieReducer = (state = initialState, action) => {
                 ...state,
                 movies: [...action.movies]
             }
-            case 'SELECT_MOVIE':
 
+        case 'SELECT_MOVIE':
             if (action.id) {
                 const selectedMovie = state.movies.find((movie) => movie.id === action.id)
                 return {
@@ -35,12 +37,14 @@ const movieReducer = (state = initialState, action) => {
                     }
                 }
             }
-            case 'UNSELECT_MOVIE':
+
+        case 'UNSELECT_MOVIE':
             return {
                 ...state,
                 selectedMovie: {}
             }
-            case 'UPDATE_MOVIE':
+
+        case 'UPDATE_MOVIE':
             return {
                 ...state,
                 movies: state.movies.map((movie) => {
@@ -51,6 +55,7 @@ const movieReducer = (state = initialState, action) => {
                     else return movie
                 })
             }
+
         case 'ADD_MOVIE':
             return {
                 ...state,
@@ -60,12 +65,32 @@ const movieReducer = (state = initialState, action) => {
                 ]
 
             }
+
         case 'DELETE_MOVIE':
             return {
                 ...state,
                 movies: state.movies
-                    .filter((movie) => movie.id !== action.deletedMovieId)
+                    .filter((movie) => movie.id !== state.deletedMovie.id)
             }
+
+        case 'CLOSE_DELETE_MSG':
+            return {
+                ...state,
+                isDeleteMsgOpen: false
+            }
+
+        case 'OPEN_DELETE_MSG':
+            return {
+                ...state,
+                isDeleteMsgOpen: true
+            }
+
+        case 'SET_DELETED_MOVIE':
+            return {
+                ...state,
+                deletedMovie: state.movies.find(movie => movie.id === action.deletedMovieId)
+            }
+
         default:
             return state
     }

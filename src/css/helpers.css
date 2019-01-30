@@ -55,6 +55,10 @@
   justify-content: space-evenly;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .align-center {
   align-items: center;
 }

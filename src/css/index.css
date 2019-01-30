@@ -5,8 +5,10 @@
 @import '~typeface-roboto';
 @import './helpers.css';
 @import './scrollbar.css';
-
+@import './fonts.css';
+/* @import url('https://fonts.googleapis.com/css?family=Fascinate+Inline'); */
 @import './nav-bar.css';
+@import './footer.css';
 @import './movie-page.css';
 @import './movie-preview.css';
 @import './movie-edit.css';

@@ -10,15 +10,26 @@ export const loadMovies = () => {
     }
 }
 
-export const addMovie = (addedMovie) => ({ type: 'ADD_MOVIE', addedMovie })
+export const addMovie = (addedMovie) => {
+    addedMovie.title = movieService.handleTitle(addedMovie.title)
+    return { type: 'ADD_MOVIE', addedMovie }
+}
 
-export const deleteMovie = (deletedMovieId) => ({ type: 'DELETE_MOVIE', deletedMovieId })
+export const updateMovie = (updatedMovie) => {
+    updatedMovie.title = movieService.handleTitle(updatedMovie.title)
+    return { type: 'UPDATE_MOVIE', updatedMovie }
+}
 
-export const updateMovie = (updatedMovie) => ({ type: 'UPDATE_MOVIE', updatedMovie })
 
 export const selectMovie = (id) => ({ type: 'SELECT_MOVIE', id })
 
-export const unSelectMovie = () => ({ type: 'UNSELECT_MOVIE'})
+export const unSelectMovie = () => ({ type: 'UNSELECT_MOVIE' })
 
+export const deleteMovie = () => ({ type: 'DELETE_MOVIE' })
 
+export const closeDeleteMsg = () => ({ type: 'CLOSE_DELETE_MSG' })
+
+export const openDeleteMsg = () => ({ type: 'OPEN_DELETE_MSG' })
+
+export const setDeletedMovie = (deletedMovieId) => ({ type: 'SET_DELETED_MOVIE', deletedMovieId })
 

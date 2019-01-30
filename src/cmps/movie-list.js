@@ -9,8 +9,8 @@ function MovieList(props) {
             {!!movies.length &&
             <div className="movie-list">
                     {
-                        movies.map((movie) =>
-                            <MoviePreview movie={movie} key={movie.id} />
+                        movies.map((movie,idx) =>
+                            <MoviePreview movie={movie} borderless={idx === movies.length - 1} key={movie.id} />
                     )}
             </div>
             }

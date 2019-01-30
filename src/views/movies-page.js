@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import MovieList from '../cmps/movie-list.js'
 import MovieEdit from '../cmps/movie-edit.js'
 import store from '../store/store';
+import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
+import * as actionCreator from '../store/actions/actions'
 
 
 
@@ -10,13 +12,21 @@ import { connect } from 'react-redux';
 class MoviesPage extends Component {
   render() {
     return (
-        <div className="movies-page">
-            <MovieList store={store}/>
-            {
-              this.props.selectedMovie.id &&
-              <MovieEdit store={store}/>
-            }
+      <div className="movies-page">
+        <div className="container">
+          <div className="top-wrapper">
+            <h4 className="capitalize">your movie library</h4>
+            <Button color="primary" variant="outlined" onClick={this.props.onAddMovieClick}>
+            <i className="fas fa-plus"></i>Add Movie
+            </Button>
+          </div>
+          <MovieList store={store} />
+          {
+            this.props.selectedMovie.id &&
+            <MovieEdit store={store} />
+          }
         </div>
+      </div>
     )
   }
 }
@@ -24,13 +34,14 @@ class MoviesPage extends Component {
 
 function mapStateToProps(state) {
   return {
-      selectedMovie: state.selectedMovie
+    selectedMovie: state.selectedMovie
   }
 }
-
 function mapDispatchToProps(dispatch) {
   return {
-
+    onAddMovieClick: () => {
+      dispatch(actionCreator.selectMovie(null))
+    }
   }
 }
 

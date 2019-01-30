@@ -1,6 +1,7 @@
 import axios from 'axios';
 export default {
-    query
+    query,
+    handleTitle
 }
 
 const API_KEY = '5c2e7969'
@@ -30,7 +31,7 @@ function _handleData(data) {
         data.runtime = parseInt(data.Runtime)
         data.genres = data.Genre.split(',')
         data.genres = data.genres.map(genre => genre.trim())
-        data.title = data.Title
+        data.title = handleTitle(data.Title)
         data.year = data.Year
         data.director = data.Director
         for (let prop in data) {
@@ -46,4 +47,10 @@ function _handleData(data) {
                 }
         }
     return data
+}
+
+function handleTitle(title) {
+    title = title.toLowerCase()
+    title = title.replace(/[^a-zA-Z0-9 ]/g,'')
+    return title
 }
