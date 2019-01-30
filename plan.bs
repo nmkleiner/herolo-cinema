@@ -3,10 +3,20 @@ couldn't get done:
 
 wednesday:
     -upload to heroku 
-    -verify responsivity
+    -add paging to movies
     -favicon - flaticon
+    -build my own chips
+    
+
+    -verify responsivity: 
+        -edit page has to much space above heading
+        -long text goes out of chips
 
 
+    V-fixes: 
+    V-less margin or whatever
+    V-less padding more width in page and preview
+    V-make all chips have the same length: make my own chips || use a wrapper
     V-finish design movie preview
     V-some text in top wrapper
     V-mui progress somewhere

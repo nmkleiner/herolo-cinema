@@ -205,28 +205,28 @@ class MovieEdit extends Component {
                                 }
                             </FormControl>
                         })}
-                        <div className="flex justify-center">
-                            <Button
-                                variant="contained"
-                                size="large" color="primary"
-                                type="submit"
-                            >
-                                {
-                                    isWorking ?
-                                        <CircularProgress color="inherit" />
-                                        :
-                                        'save'
-                                }
+                    </div>
+                    <div className="flex justify-center">
+                        <Button
+                            variant="contained"
+                            size="large" color="primary"
+                            type="submit"
+                        >
+                            {
+                                isWorking ?
+                                    <CircularProgress color="inherit" />
+                                    :
+                                    'save'
+                            }
+                        </Button>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            type="button"
+                            onClick={this.props.onClose.bind(this)}
+                        >
+                            cancel
                             </Button>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                type="button"
-                                onClick={this.props.onClose.bind(this)}
-                            >
-                                cancel
-                            </Button>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -259,7 +259,7 @@ function mapDispatchToProps(dispatch) {
                 await this.setState({ isWorking: true })
                 await setTimeout(async () => {
                     await this.setState({ isClosing: true })
-                },700)
+                }, 700)
                 setTimeout(() => {
                     dispatch(actionCreator.unSelectMovie())
                 }, 1400)
