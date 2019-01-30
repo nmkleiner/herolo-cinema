@@ -12,7 +12,7 @@
 /build
 
 # misc
-plan.bs
+plan.*
 apikeys.*
 .DS_Store
 .env.local
