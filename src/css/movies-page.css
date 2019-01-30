@@ -2,15 +2,24 @@
     border: 1px solid silver;
     border-radius: 5px;
     background-color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    min-height: calc(100vh - 51px - 50px - 50px - 115px)
 }
 
 .movies-page .top-wrapper {
     border-bottom: 1px solid silver;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s;
+}
+
+.movies-page .top-wrapper.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
 }
 
 @media (min-width: 768px) {

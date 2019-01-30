@@ -4,8 +4,13 @@
 }
 
 @font-face {
-    font-family: Fascinate;
-    src: url(../assets/fonts/FascinateInline-Regular.ttf);
+    font-family: Baloo;
+    src: url(../assets/fonts/Baloo_Thambi/BalooThambi-Regular.ttf);
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(../assets/fonts/Pacifico/Pacifico-Regular.ttf);
 }
 
 

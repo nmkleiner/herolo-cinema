@@ -21,19 +21,10 @@ p {
     text-align: left;
 }
 
-small {
-    font-size: 0.8rem;
-    color: silver;
-}
-
 .gray-text {
     color: gray;
 }
 
-/* 576
-768
-992
-1200 */
 .container {
     width: 100vw;
     margin: 0 auto;

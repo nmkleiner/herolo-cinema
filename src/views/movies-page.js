@@ -14,10 +14,10 @@ class MoviesPage extends Component {
     return (
       <div className="movies-page">
         <div className="container">
-          <div className="top-wrapper">
+          <div className={this.props.selectedMovie.id? 'top-wrapper': 'top-wrapper sticky'}>
             <h4 className="capitalize">your movie library</h4>
             <Button color="primary" variant="outlined" onClick={this.props.onAddMovieClick}>
-            <i className="fas fa-plus"></i>Add Movie
+              <i className="fas fa-plus"></i>Add Movie
             </Button>
           </div>
           <MovieList store={store} />
@@ -25,6 +25,7 @@ class MoviesPage extends Component {
             this.props.selectedMovie.id &&
             <MovieEdit store={store} />
           }
+
         </div>
       </div>
     )

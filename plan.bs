@@ -1,18 +1,14 @@
-couldn't get done:
-    -make select in edit have gray text 
 
 wednesday:
-    -upload to heroku 
-    -add paging to movies
-    -favicon - flaticon
-    -build my own chips
-    
+    -clean code
 
-    -verify responsivity: 
-        -edit page has to much space above heading
-        -long text goes out of chips
-
-
+    V-placeholder img in assets
+    V-position sticky to add btn
+    V-favicon - flaticon
+    V-placeholder images
+    V-upload to gh-pages 
+    V-build my own chips
+    V-fix edit in big screen
     V-fixes: 
     V-less margin or whatever
     V-less padding more width in page and preview
@@ -27,6 +23,7 @@ wednesday:
     V-format titles
     V-design movie page
     V-look at pixel-perfect project for design reference
+
     V-btns: כפתורים בעריכה יהיו בולטים, כפתור הוספה יהיה באמצע
     V-webpage title and 
     V-design navbar

@@ -28,6 +28,9 @@
 .mx-20 {
   margin: 0 20px;
 }
+.mx-auto {
+  margin: 0 auto;
+}
 
 /* Flex */
 
@@ -127,10 +130,10 @@
   position: fixed;
 }
 
-/* Grid */
+/* Display */
 
-.grid {
-  display: grid;
+.d-block {
+  display: block;
 }
 
 /* text */

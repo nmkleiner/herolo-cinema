@@ -4,8 +4,9 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 5px solid silver;
-    padding: 10px 0 10px;
-    font-family: 'Fascinate', cursive;
+    padding: 10px;
+    font-family: 'Baloo', cursive;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
+
