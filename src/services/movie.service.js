@@ -1,10 +1,11 @@
 import axios from 'axios';
+import apis from '../assets/keys/apikeys'
 export default {
     query,
     handleTitle
 }
 
-const API_KEY = '5c2e7969'
+const API_KEY = apis.omdbKey
 const URL = 'https://www.omdbapi.com/?'
 async function query() {
         const titles = [

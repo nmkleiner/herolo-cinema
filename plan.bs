@@ -1,6 +1,8 @@
 
 wednesday:
+    -fix x axis scroll on mobile
     -clean code
+    -hide api key
 
     V-placeholder img in assets
     V-position sticky to add btn
