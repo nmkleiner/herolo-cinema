@@ -2,10 +2,12 @@ couldn't get done:
     -make select in edit have gray text 
 
 wednesday:
+    -upload to heroku 
+    -verify responsivity
     -favicon - flaticon
-    -finish design movie preview
 
 
+    V-finish design movie preview
     V-some text in top wrapper
     V-mui progress somewhere
     V-fontawesome in btns

@@ -5,7 +5,7 @@ export default {
 }
 
 const API_KEY = '5c2e7969'
-const URL = 'http://www.omdbapi.com/?'
+const URL = 'https://www.omdbapi.com/?'
 async function query() {
         const titles = [
             'the empire strikes back',
