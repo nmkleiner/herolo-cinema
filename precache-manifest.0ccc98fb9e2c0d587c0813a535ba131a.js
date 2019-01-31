@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "510dec37fa69fba39593e01a469ee018",
-    "url": "/herolo-cinema/static/media/roboto-latin-500italic.510dec37.woff2"
+    "revision": "de8b7431b74642e830af4d4f4b513ec9",
+    "url": "/herolo-cinema/static/media/roboto-latin-500.de8b7431.woff"
   },
   {
-    "revision": "616136b260d5dae5d6da",
-    "url": "/herolo-cinema/static/css/main.d58c4167.chunk.css"
+    "revision": "6956f9a2c3f5f7a2c967",
+    "url": "/herolo-cinema/static/css/main.2ded08b2.chunk.css"
   },
   {
     "revision": "27603739fe78fee587c7b84873475b61",
     "url": "/herolo-cinema/static/media/fa-solid-900.27603739.svg"
   },
   {
-    "revision": "a26ea3fd4deadd17c97f",
-    "url": "/herolo-cinema/static/js/1.a26ea3fd.chunk.js"
+    "revision": "5ca966ca519abd134e97",
+    "url": "/herolo-cinema/static/js/1.5ca966ca.chunk.js"
   },
   {
     "revision": "c39d694574e552dcfc72",
@@ -72,12 +72,12 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/roboto-latin-100italic.d704bb3d.woff"
   },
   {
-    "revision": "a1471d1d6431c893582a5f6a250db3f9",
-    "url": "/herolo-cinema/static/media/roboto-latin-300.a1471d1d.woff"
-  },
-  {
     "revision": "d69924b98acd849cdeba9fbff3f88ea6",
     "url": "/herolo-cinema/static/media/roboto-latin-300italic.d69924b9.woff2"
+  },
+  {
+    "revision": "a1471d1d6431c893582a5f6a250db3f9",
+    "url": "/herolo-cinema/static/media/roboto-latin-300.a1471d1d.woff"
   },
   {
     "revision": "210a7c781f5a354a0e4985656ab456d9",
@@ -96,24 +96,24 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/roboto-latin-400italic.9680d5a0.woff"
   },
   {
-    "revision": "616136b260d5dae5d6da",
-    "url": "/herolo-cinema/static/js/main.616136b2.chunk.js"
-  },
-  {
-    "revision": "de8b7431b74642e830af4d4f4b513ec9",
-    "url": "/herolo-cinema/static/media/roboto-latin-500.de8b7431.woff"
+    "revision": "6956f9a2c3f5f7a2c967",
+    "url": "/herolo-cinema/static/js/main.6956f9a2.chunk.js"
   },
   {
     "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
     "url": "/herolo-cinema/static/media/roboto-latin-500italic.ffcc050b.woff"
   },
   {
-    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
-    "url": "/herolo-cinema/static/media/roboto-latin-700italic.010c1aee.woff2"
+    "revision": "510dec37fa69fba39593e01a469ee018",
+    "url": "/herolo-cinema/static/media/roboto-latin-500italic.510dec37.woff2"
   },
   {
     "revision": "cf6613d1adf490972c557a8e318e0868",
     "url": "/herolo-cinema/static/media/roboto-latin-700.cf6613d1.woff"
+  },
+  {
+    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
+    "url": "/herolo-cinema/static/media/roboto-latin-700italic.010c1aee.woff2"
   },
   {
     "revision": "846d1890aee87fde5d8ced8eba360c3a",
@@ -184,11 +184,11 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/fa-brands-400.fef43c1f.svg"
   },
   {
-    "revision": "a26ea3fd4deadd17c97f",
-    "url": "/herolo-cinema/static/css/1.1b569802.chunk.css"
+    "revision": "5ca966ca519abd134e97",
+    "url": "/herolo-cinema/static/css/1.ebc7acf1.chunk.css"
   },
   {
-    "revision": "524e9da1401554ab579545c0fa29d61a",
+    "revision": "44fbc2307793f6284685b81ad7a4a660",
     "url": "/herolo-cinema/index.html"
   }
 ];
