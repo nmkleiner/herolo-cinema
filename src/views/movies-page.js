@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieList from '../cmps/movie-list.js'
-import MovieEdit from '../cmps/movie-edit.js'
+import MovieEdit from '../cmps/movie-edit/movie-edit.js'
 import store from '../store/store';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
