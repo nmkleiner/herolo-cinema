@@ -4,11 +4,9 @@
     padding: 0 10px 20px;
 }
 
-
-.chips-wrapper {
+.details-wrapper {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     width: 100%;
     max-width: 500px;
     margin: 20px auto 0;
@@ -22,7 +20,7 @@
     .movie-preview {
         padding: 0 100px 20px;
     }
-    .chips-wrapper {
+    .details-wrapper {
         width: 70%;
         max-width: unset;
 

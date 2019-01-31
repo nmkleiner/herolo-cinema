@@ -1,9 +1,14 @@
+thursday:
+    -clean code
+    V-scroll up button with position sticky
+
+
+
+
 
 wednesday:
-    -fix x axis scroll on mobile
-    -clean code
-    -hide api key
-
+    V-fix x axis scroll on mobile
+    V-hide api key
     V-placeholder img in assets
     V-position sticky to add btn
     V-favicon - flaticon
@@ -25,9 +30,9 @@ wednesday:
     V-format titles
     V-design movie page
     V-look at pixel-perfect project for design reference
-
+tuesday:
     V-btns: כפתורים בעריכה יהיו בולטים, כפתור הוספה יהיה באמצע
-    V-webpage title and 
+    V-webpage title 
     V-design navbar
     V-prevent double occurence by title
     V-color to btns

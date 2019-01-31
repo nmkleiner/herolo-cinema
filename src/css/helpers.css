@@ -130,11 +130,17 @@
   position: fixed;
 }
 
+.position-sticky {
+  position: sticky;
+}
+
 /* Display */
 
 .d-block {
   display: block;
 }
+
+
 
 /* text */
 .capitalize {

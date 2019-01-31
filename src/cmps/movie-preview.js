@@ -1,60 +1,48 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreator from '../store/actions/actions'
 import Button from '@material-ui/core/Button';
-import Chip from './chip';
+import DetailLine from './detail-line';
 import placeholderImg from '../assets/img/placeholder.png';
-class MoviePreview extends Component {
 
-    render() {
-        const { movie, borderless } = this.props
+const MoviePreview = ({ movie, borderless, onEditClick, onDeleteMovieClick }) => {
+
+        const details =[
+            {label: 'year released:', item: movie.year, items: ''},
+            {label: 'genre:', item: '', items: movie.genres},
+            {label: 'runtime:', item: movie.runtime, items: ''},
+            {label: 'director:', item: movie.director, items: ''},
+        ]
+
         return (
-            <div className={
-                borderless ?
-                    'movie-preview inner-container capitalize borderless' :
-                    'movie-preview inner-container capitalize'
-            }>
+            <div 
+                className={'movie-preview inner-container capitalize' + (borderless? ' borderless' : '')}
+            >
                 <h4>{movie.title}</h4>
                 <img 
                     src={placeholderImg}
                     alt="movie" 
                     className="mx-auto d-block"
                 />
-                <div className="chips-wrapper">
-                    <Chip label={'year released: ' + movie.year} variant="outlined" />
-                    <Chip
-                        label={'genre: ' + movie.genres.map((genre, idx) => {
-                            if (idx === movie.genres.length - 1) {
-                                return ' ' + genre + '.'
-                            }
-                            return ' ' + genre
-                        })} variant="outlined"
-                    />
-                    <Chip label={'runtime: ' + movie.runtime + 'min'} variant="outlined" />
-                    <Chip label={'director: ' + movie.director} variant="outlined" />
+
+                <div className="details-wrapper">
+                    {details.map((detail,idx) => 
+                        <DetailLine label={detail.label} item={detail.item} items={detail.items} key={idx} />
+                    )}
                 </div>
+
                 <div className="button-wrapper flex justify-end mt-20">
-                    <Button
-                        variant="text"
-                        color="default"
-                        onClick={this.props.onEditClick.bind({}, movie.id)}
-                    >
+                    <Button onClick={onEditClick.bind({}, movie.id)}>
+                        edit&nbsp;
                         <i className="fas fa-edit"></i>
-                        &nbsp;edit
                     </Button>
-                    <Button
-                        variant="text"
-                        color="default"
-                        onClick={this.props.onDeleteMovieClick.bind({}, movie.id)}
-                    >
+                    <Button onClick={onDeleteMovieClick.bind({}, movie.id)}>
+                        delete&nbsp;
                         <i className="fas fa-trash"></i>
-                        &nbsp;delete
                     </Button>
                 </div>
             </div>
         )
-    }
-
 }
 
 function mapDispatchToProps(dispatch) {

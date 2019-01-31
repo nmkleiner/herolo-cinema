@@ -1,21 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MoviePreview from './movie-preview';
+import Fab from '@material-ui/core/Fab';
 
-function MovieList(props) {
-    const {movies} = props
-    return (
-        <React.Fragment>
-            {!!movies.length &&
+
+class MovieList extends Component {
+    scrollUp() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    render() {
+        const { movies } = this.props
+        return (
             <div className="movie-list">
-                    {
-                        movies.map((movie,idx) =>
-                            <MoviePreview movie={movie} borderless={idx === movies.length - 1} key={movie.id} />
-                    )}
+                {
+                    movies.map((movie, idx) =>
+                        <React.Fragment key={movie.id}>
+                            {
+                                idx === 2 &&
+                                <div className="position-sticky">
+                                    <Fab
+                                        onClick={this.scrollUp}
+                                    ><i className="fas fa-angle-double-up"></i></Fab>
+                                </div>
+                            }
+                            <MoviePreview
+                                movie={movie}
+                                borderless={idx === movies.length - 1}
+                            />
+                        </React.Fragment>
+                    )
+                }
             </div>
-            }
-        </React.Fragment>
-    )
+
+        )
+    }
 }
 
 

@@ -8,7 +8,8 @@
 @import './fonts.css';
 @import './nav-bar.css';
 @import './footer.css';
-@import './chip.css';
+@import './detail-line.css';
 @import './movies-page.css';
 @import './movie-preview.css';
 @import './movie-edit.css';
+@import './movie-list.css';
