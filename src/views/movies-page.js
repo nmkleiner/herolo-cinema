@@ -17,7 +17,7 @@ class MoviesPage extends Component {
           <div className={this.props.selectedMovie.id? 'top-wrapper': 'top-wrapper sticky'}>
             <h4 className="capitalize">your movie library</h4>
             <Button color="primary" variant="outlined" onClick={this.props.onAddMovieClick}>
-              <i className="fas fa-plus"></i>Add Movie
+              <i className="fas fa-plus"></i>&nbsp;Add Movie
             </Button>
           </div>
           <MovieList store={store} />

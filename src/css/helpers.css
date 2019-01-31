@@ -147,7 +147,7 @@
   text-transform: capitalize;
 }
 .bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 .small-text{
   font-size: 0.8rem;

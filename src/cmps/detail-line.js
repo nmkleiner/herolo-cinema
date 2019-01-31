@@ -4,7 +4,7 @@ function DetailLine({ label, items, item }) {
 
     return (
         <div className="detail-line">
-            <span>{label}</span>
+            <span className="bold">{label}</span>
             {item &&
                 <span>{' ' + item}</span>
             }

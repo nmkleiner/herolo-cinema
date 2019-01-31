@@ -92,7 +92,7 @@ function validate() {
                 if (+selectedMovie[prop] < 1) setErrorAndState(prop)
                 break
             case 'year':
-                if (+selectedMovie[prop] < 1888 || +selectedMovie[prop] > 2020) setErrorAndState(prop)
+                if (+selectedMovie[prop] < 1888 || +selectedMovie[prop] > 2100) setErrorAndState(prop)
                 break
             case 'genres':
                 if (!selectedMovie[prop].length || !selectedMovie[prop][0]) setErrorAndState(prop)

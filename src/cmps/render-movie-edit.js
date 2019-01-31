@@ -11,10 +11,10 @@ function RenderMovieEdit({props}) {
     const {movie,isWorking,isClosing,addMovie,textFields,onSubmit,onClose} = props
     return (
         <div className={'movie-edit capitalize animated ' + (isClosing ? 'fadeOut' : 'fadeIn')} >
-            <div className="modal-screen"></div>
+            <div className="modal-screen" onClick={onClose}></div>
             <form
                 onSubmit={onSubmit.bind(this)}
-                className={'animated ' + (isClosing ? 'fadeOutRight' : 'fadeInRight')}
+                className={'animated container ' + (isClosing ? 'fadeOutRight' : 'fadeInRight')}
             >
 
                 <h3>{addMovie ? 'Add new movie' : 'Update movie'}</h3>

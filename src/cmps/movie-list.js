@@ -24,6 +24,7 @@ class MovieList extends Component {
                                 <div className="position-sticky">
                                     <Fab
                                         onClick={this.scrollUp}
+                                        color="primary"
                                     ><i className="fas fa-angle-double-up"></i></Fab>
                                 </div>
                             }
