@@ -4,11 +4,6 @@
     border-radius: 5px;
     margin-bottom: 10px;
     text-align: left;
-    transition: .2s;
-}
-
-.detail-line:hover {
-    border-color: gray;
 }
 
 .detail-line span {

@@ -5,7 +5,7 @@ const initialState = {
     movies: [],
     selectedMovie: {},
     isDeleteMsgOpen: false,
-    deletedMovie: {id: ''}
+    deletedMovie: { id: '' }
 }
 
 const movieReducer = (state = initialState, action) => {
@@ -30,7 +30,7 @@ const movieReducer = (state = initialState, action) => {
                     selectedMovie: {
                         id: utilService.makeId(6),
                         title: '',
-                        year: 2010,
+                        year: '',
                         director: '',
                         runtime: '',
                         genres: ['']

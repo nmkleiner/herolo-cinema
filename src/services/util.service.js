@@ -2,7 +2,8 @@ export default {
     getRandomInt,
     makeId,
     makeLorem,
-    getCurrency
+    getCurrency,
+    makeColor
 }
 
 
@@ -15,6 +16,17 @@ function getRandomInt(min, max) {
 function makeId(length=5) {
     var text = '';
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  
+    for (var i = 0; i < length; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+  
+    return text;
+  }
+
+function makeColor() {
+    const length = 6
+    let text = '';
+    const possible = 'ABCDEF0123456789';
   
     for (var i = 0; i < length; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actionCreator from '../../store/actions/actions'
-import RenderMovieEdit from '../render-movie-edit';
-import movieService from '../../services/movie.service';
+import * as actionCreator from '../store/actions/actions'
+import RenderMovieEdit from './render-movie-edit';
+import movieService from '../services/movie.service';
 
 class MovieEdit extends Component {
 
@@ -49,7 +49,6 @@ class MovieEdit extends Component {
             <RenderMovieEdit props={renderProps}></RenderMovieEdit>
         )
     }
-
 }
 
 function mapStateToProps(state) {

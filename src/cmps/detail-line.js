@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DetailLine({ label, items, item }) {
+const DetailLine = ({ label, items, item }) => {
 
     return (
         <div className="detail-line">

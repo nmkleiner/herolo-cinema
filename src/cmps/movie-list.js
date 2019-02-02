@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import MoviePreview from './movie-preview';
 import Fab from '@material-ui/core/Fab';
 
-
 class MovieList extends Component {
     scrollUp() {
         window.scrollTo({
@@ -36,7 +35,6 @@ class MovieList extends Component {
                     )
                 }
             </div>
-
         )
     }
 }
@@ -48,11 +46,5 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
 
-    }
-}
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieList)
+export default connect(mapStateToProps, null)(MovieList)

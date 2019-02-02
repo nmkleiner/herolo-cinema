@@ -3,28 +3,32 @@ import { connect } from 'react-redux';
 import * as actionCreator from '../store/actions/actions'
 import Snackbar from '@material-ui/core/Snackbar';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 
 const DeleteMsg = ({ isDeleteMsgOpen, handleClose, handleYes }) => {
 
   return (
     <React.Fragment>
       <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         open={isDeleteMsgOpen}
         onClose={handleClose}
         message={<span id="message-id">Are you sure?</span>}
         action={[
-          <Button key="yes" color="secondary" size="small" onClick={handleYes}>
-            yes&nbsp;<i className="fas fa-trash"></i>
-          </Button>,
-          <IconButton
-            key="x"
+          <Button
+            key="ok"
             color="inherit"
+            size="small"
+            onClick={handleYes}>
+            ok
+          </Button>,
+          <Button
+            key="cancel"
+            color="inherit"
+            size="small"
             onClick={handleClose}
           >
-            x
-        </IconButton>,
+            cancel
+        </Button>,
         ]}
       />
     </React.Fragment>

@@ -7,7 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-function RenderMovieEdit({props}) {
+const RenderMovieEdit = ({props}) => {
     const {movie,isWorking,isClosing,addMovie,textFields,onSubmit,onClose} = props
     return (
         <div className={'movie-edit capitalize animated ' + (isClosing ? 'fadeOut' : 'fadeIn')} >
@@ -59,7 +59,6 @@ function RenderMovieEdit({props}) {
                     )}
                 </div>
 
-
                 <div className="buttons-wrapper flex justify-center">
                     <Button
                         variant="contained"
@@ -80,9 +79,7 @@ function RenderMovieEdit({props}) {
                 </div>
             </form>
         </div>
-
     )
 }
 
 export default RenderMovieEdit
-
