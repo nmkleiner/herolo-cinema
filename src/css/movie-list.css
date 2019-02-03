@@ -1,5 +1,4 @@
 .movie-list .position-sticky {
     top: calc(100vh - 60px);
-    opacity: 0.7;
     color: black;
 }

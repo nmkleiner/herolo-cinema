@@ -16,9 +16,10 @@ const MoviePreview = ({ movie, borderless, onEditClick, onDeleteMovieClick }) =>
 
     return (
         <div
-            className={'movie-preview inner-container capitalize' + (borderless ? ' borderless' : '')}
+        className={'movie-preview inner-container capitalize' + (borderless ? ' borderless' : '')}
         >
-            <h4>{movie.title}</h4>
+        <a name={movie.title} className="anchor hidden" href="#as">anchor</a>
+            <h4 name={movie.title}>{movie.title}</h4>
             <img
                 src={`https://via.placeholder.com/300x200/${utilService.makeColor()}/FFFFFF/?text=placeholder`}
                 alt="movie"
@@ -41,6 +42,7 @@ const MoviePreview = ({ movie, borderless, onEditClick, onDeleteMovieClick }) =>
                 </Button>
             </div>
         </div>
+
     )
 }
 

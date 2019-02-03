@@ -2,6 +2,12 @@
     margin-top: 60px;
     border-bottom: 1px solid silver;
     padding: 0 10px 20px;
+    position: relative;
+}
+
+.movie-preview .anchor {
+    position: absolute;
+    top: -130px;
 }
 
 .details-wrapper {

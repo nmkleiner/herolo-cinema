@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import MoviePreview from './movie-preview';
 import Fab from '@material-ui/core/Fab';
 
@@ -39,12 +38,4 @@ class MovieList extends Component {
     }
 }
 
-
-function mapStateToProps(state) {
-    return {
-        movies: state.movies,
-    }
-}
-
-
-export default connect(mapStateToProps, null)(MovieList)
+export default MovieList

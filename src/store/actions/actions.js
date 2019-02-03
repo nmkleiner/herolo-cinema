@@ -33,3 +33,6 @@ export const openDeleteMsg = () => ({ type: 'OPEN_DELETE_MSG' })
 
 export const setDeletedMovie = (deletedMovieId) => ({ type: 'SET_DELETED_MOVIE', deletedMovieId })
 
+export const openTitleList = () => ({ type: 'OPEN_TITLE_LIST' })
+
+export const closeTitleList = () => ({ type: 'CLOSE_TITLE_LIST' })

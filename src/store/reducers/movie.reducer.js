@@ -5,7 +5,8 @@ const initialState = {
     movies: [],
     selectedMovie: {},
     isDeleteMsgOpen: false,
-    deletedMovie: { id: '' }
+    deletedMovie: { id: '' },
+    isTitleListOpen: false
 }
 
 const movieReducer = (state = initialState, action) => {
@@ -89,6 +90,18 @@ const movieReducer = (state = initialState, action) => {
             return {
                 ...state,
                 deletedMovie: state.movies.find(movie => movie.id === action.deletedMovieId)
+            }
+
+        case 'OPEN_TITLE_LIST':
+            return {
+                ...state,
+                isTitleListOpen: true
+            }
+            
+        case 'CLOSE_TITLE_LIST':
+            return {
+                ...state,
+                isTitleListOpen: false
             }
 
         default:
