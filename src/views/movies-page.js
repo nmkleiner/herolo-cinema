@@ -29,7 +29,7 @@ class MoviesPage extends Component {
             </Button>
           </div>
           <TitleList store={store} />
-          <MovieList movies={movies} />
+          <MovieList selectMovie={selectedMovie} movies={movies} />
           {
             selectedMovie.id &&
             <MovieEdit store={store} />

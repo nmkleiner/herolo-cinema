@@ -3,7 +3,7 @@ import utilService from '../../services/util.service';
 
 const initialState = {
     movies: [],
-    selectedMovie: {},
+    selectedMovie: {id: ''},
     isDeleteMsgOpen: false,
     deletedMovie: { id: '' },
     isTitleListOpen: false

@@ -11,7 +11,7 @@ class MovieList extends Component {
     }
 
     render() {
-        const { movies } = this.props
+        const { movies, selectedMovie } = this.props
         return (
             <div className="movie-list">
                 {
@@ -21,6 +21,7 @@ class MovieList extends Component {
                                 idx === 2 &&
                                 <div className="position-sticky">
                                     <Fab
+                                        size="small"
                                         onClick={this.scrollUp}
                                         color="primary"
                                     ><i className="fas fa-angle-double-up"></i></Fab>

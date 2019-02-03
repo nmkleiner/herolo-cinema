@@ -1,15 +1,16 @@
-.title-list .item {
-    text-decoration: none;
-    color: #003333;
-}
-
 .title-list .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 0 20px;
+    font-size: 1.2rem;
 }
 
 .title-list .wrapper h4{
     margin: 0;
+}
+
+.title-list .item {
+    text-decoration: none;
+    color: #003333;
 }
