@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import List from '@material-ui/core/List';
 import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import ListItem from '@material-ui/core/ListItem';
 import * as actionCreator from '../store/actions/actions'
@@ -23,9 +24,12 @@ const TitleList = ({ movies, isTitleListOpen, closeTitleList }) => {
                         if (movie1.title > movie2.title) return 1
                         return 0;
                     }).map((movie, idx) =>
-                        <a onClick={closeTitleList} className="item" key={idx} href={'#' + movie.title}>
-                            <ListItem className="capitalize">{movie.title}</ListItem>
-                        </a>
+                        <React.Fragment key={idx}>
+                            <a onClick={closeTitleList} className="item" href={'#' + movie.title}>
+                                <ListItem className="capitalize">{movie.title}</ListItem>
+                            </a>
+                            <Divider />
+                        </React.Fragment>
                     )
                 }
             </List>
