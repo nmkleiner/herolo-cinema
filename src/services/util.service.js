@@ -3,7 +3,8 @@ export default {
     makeId,
     makeLorem,
     getCurrency,
-    makeColor
+    makeColor,
+    capitalizeStr
 }
 
 
@@ -78,4 +79,13 @@ function _getRandChar() {
     var LETTERS = 'abcdefghijklmnopqrstuvwxyz';
     var randIndex = parseInt(Math.random() * LETTERS.length)
     return LETTERS.charAt(randIndex);
+}
+
+
+function _capitalizeWord(word) {
+    return word.charAt(0).toUpperCase() + word.substr(1,word.length-1)
+}
+
+function capitalizeStr(str) {
+    return str.split(' ').map(word => _capitalizeWord(word)).join(' ')
 }

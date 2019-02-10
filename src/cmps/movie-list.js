@@ -1,37 +1,20 @@
 import React, { Component } from 'react';
 import MoviePreview from './movie-preview';
-import Fab from '@material-ui/core/Fab';
-
+import MovieDetails from './movie-details';
+import { connect } from 'react-redux';
 class MovieList extends Component {
-    scrollUp() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
+
 
     render() {
-        const { movies, selectedMovie } = this.props
+        const { movies,showMovieDetails } = this.props
         return (
             <div className="movie-list">
                 {
-                    movies.map((movie, idx) =>
-                        <React.Fragment key={movie.id}>
-                            {
-                                idx === 2 &&
-                                <div className="position-sticky">
-                                    <Fab
-                                        size="small"
-                                        onClick={this.scrollUp}
-                                        color="primary"
-                                    ><i className="fas fa-angle-double-up"></i></Fab>
-                                </div>
-                            }
-                            <MoviePreview
-                                movie={movie}
-                                borderless={idx === movies.length - 1}
-                            />
-                        </React.Fragment>
+                    movies.map((movie, idx) => 
+                            showMovieDetails? 
+                            <MovieDetails movie={movie} key={idx} /> 
+                            :
+                            <MoviePreview movie={movie} key={idx} />
                     )
                 }
             </div>
@@ -39,4 +22,14 @@ class MovieList extends Component {
     }
 }
 
-export default MovieList
+
+
+function mapStateToProps(state) {
+    return {
+      movies: state.movies,
+      showMovieDetails: state.showMovieDetails
+    }
+  }
+  
+
+  export default connect(mapStateToProps, {})(MovieList)

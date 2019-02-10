@@ -6,30 +6,55 @@ import store from '../store/store';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import * as actionCreator from '../store/actions/actions'
+import Fab from '@material-ui/core/Fab';
+import SwitchButtons from '../cmps/switch-buttons';
 
 class MoviesPage extends Component {
+  scrollUp() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+
   render() {
-    const { 
-      onAddMovieClick, 
-      selectedMovie, 
-      movies, 
-      openTitleList 
+    const {
+      onAddMovieClick,
+      selectedMovie,
+      openTitleList
     } = this.props
 
     return (
       <div className="movies-page">
         <div className="container">
           <div className={selectedMovie.id ? 'top-wrapper' : 'top-wrapper sticky'}>
-            <h4 onClick={openTitleList} className="capitalize pointer">
-              <i className="fas fa-list-ul"></i>&nbsp;
-              your movie library
-            </h4>
-            <Button color="primary" variant="outlined" onClick={onAddMovieClick}>
-              <i className="fas fa-plus"></i>&nbsp;Add Movie
-            </Button>
+            <h3 onClick={openTitleList} className="capitalize pointer">
+              <i className="fas fa-bars"></i>&nbsp;
+              
+            </h3>
+            <div className={'buttons-wrapper'}>
+              <SwitchButtons store={store} />
+              <Button color="primary" variant="outlined" onClick={onAddMovieClick}>
+                <i className="fas fa-plus"></i>&nbsp;Add Movie
+              </Button>
+            </div>
           </div>
+
           <TitleList store={store} />
-          <MovieList selectMovie={selectedMovie} movies={movies} />
+
+          <div className="position-sticky">
+            <Fab
+              size="small"
+              onClick={this.scrollUp}
+              color="primary"
+            >
+              <i className="fas fa-angle-double-up"></i>
+            </Fab>
+          </div>
+
+          <MovieList store={store} />
+
           {
             selectedMovie.id &&
             <MovieEdit store={store} />

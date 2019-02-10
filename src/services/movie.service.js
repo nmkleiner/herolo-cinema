@@ -1,21 +1,40 @@
 import axios from 'axios';
 import apis from '../assets/keys/apikeys'
-
+import utilService from './util.service';
 
 const API_KEY = apis.omdbKey
 const URL = 'https://www.omdbapi.com/?'
 async function query() {
     const titles = [
-        'the empire strikes back',
         'fight club',
         'the matrix',
-        'lord of the rings',
         'logan lucky',
         'aladin',
-        'saving private ryan'
+        'saving private ryan',
+        'A Private War',
+        'the greatest showman',
+        'venom',
+        'the wife',
+        'robin hood',
+        'shazam',
+        'miss bala',
+        'a simple favor',
+        'cold pursuit',
+        'aquaman',
+        'climax',
+        'ocean\'s eight',
+        'deadpool',
+        'after',
+        'wonder woman',
+        'the grinch',
+        'annihilation',
+        'the godfather',
+        'the big lebowski',
+        'the irishman',
     ]
     const movies = await Promise.all(titles.map(async (title) => {
         const res = await axios.get(`${URL}t=${title}&apikey=${API_KEY}`)
+        // console.log(res.data)
         res.data = _handleData(res.data)
         return res.data
     }))
@@ -25,20 +44,27 @@ async function query() {
 
 function _handleData(data) {
     data.id = data.imdbID
+    data.title = handleTitle(data.Title)
     data.runtime = parseInt(data.Runtime)
     data.genres = data.Genre.split(',')
     data.genres = data.genres.map(genre => genre.trim())
-    data.title = handleTitle(data.Title)
     data.year = data.Year
     data.director = data.Director
+    data.rank = Math.round(+data.imdbRating) / 2
+    data.reviewCount = utilService.getRandomInt(100, 1300)
+    data.imgUrl = data.Poster
     for (let prop in data) {
         if (
             prop !== 'id' &&
             prop !== 'title' &&
-            prop !== 'year' &&
             prop !== 'runtime' &&
             prop !== 'genres' &&
-            prop !== 'director'
+            prop !== 'year' &&
+            prop !== 'director' &&
+            prop !== 'rank' &&
+            prop !== 'reviewCount' &&
+            prop !== 'imgUrl' 
+
         ) {
             delete data[prop]
         }

@@ -11,12 +11,12 @@
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: dimgray; 
+    background: #033; 
     border-radius: 10px;
     transition: 0.3s;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: lighten(dimgray,5%); 
+    background: lighten(#033,5%); 
 }

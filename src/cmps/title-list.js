@@ -25,6 +25,7 @@ const TitleList = ({ movies, isTitleListOpen, closeTitleList }) => {
                         return 0;
                     }).map((movie, idx) =>
                         <React.Fragment key={idx}>
+                            <Divider />
                             <a onClick={closeTitleList} className="item" href={'#' + movie.title}>
                                 <ListItem className="capitalize">{movie.title}</ListItem>
                             </a>

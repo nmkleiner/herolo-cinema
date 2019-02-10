@@ -1,0 +1,21 @@
+.switch-buttons button {
+    border: 1px solid silver;
+    color: black;
+    padding: 8px;
+    margin-right: 5px; 
+    border-radius: 6px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.switch-buttons button:focus {
+    outline: none;
+
+}
+.switch-buttons button:hover {
+    background-color: rgb(247, 228, 125);
+}
+
+.switch-buttons button.chosen {
+    background-color: #ffb400;
+}

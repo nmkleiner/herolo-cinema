@@ -1,18 +1,26 @@
 .movies-page .container {
-    border: 1px solid silver;
+    /* border: 1px solid silver; */
     border-radius: 5px;
     background-color: #fff;
     margin-bottom: 50px;
-    min-height: calc(100vh - 51px - 50px - 50px - 115px)
+    min-height: calc(100vh - 51px - 50px - 50px - 115px);
+
 }
 
 .movies-page .top-wrapper {
-    border-bottom: 1px solid silver;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 0.3s;
+}
+
+.movies-page .buttons-wrapper {
+    display: flex;
+}
+
+.movies-page .buttons-wrapper .switch-buttons{
+    margin-right: 5px;
 }
 
 .movies-page .top-wrapper h4 {
@@ -21,9 +29,11 @@
 
 .movies-page .top-wrapper.sticky {
     position: sticky;
-    top: 0;
+    top: -2px;
     z-index: 1;
     background-color: #fff;
+    border: 1px solid silver;
+    border-top-color: transparent;
 }
 
 @media (min-width: 768px) {
