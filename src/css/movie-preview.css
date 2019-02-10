@@ -87,8 +87,9 @@
 
 .movie-preview.row .movie-img {
     width: 150px;
-    height: 200px;
-    margin: 10px 10px 10px 0;   
+    height: calc(100% - 20px);
+    margin: 10px 10px 10px 0;
+    align-self: center; 
 }
 
 .movie-preview.row .movie-img:hover {
@@ -101,6 +102,10 @@
     align-items: flex-start;
     margin: 10px 0;   
     justify-content: space-between;
+}
+
+.movie-preview.row .details-wrapper {
+    margin-top: 10px;   
 }
 
 .movie-preview.row .button-wrapper {
@@ -119,10 +124,11 @@
     }
     .row-buttons-wrapper {
         margin: 20px 0;
-
+        
     }
     
     .movie-preview.row .details-wrapper {
+        margin: 20px 0;
         width: 200px;
     }
 }

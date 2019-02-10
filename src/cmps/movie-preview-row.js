@@ -37,7 +37,7 @@ const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
 
 
 
-                <div className="button-wrapper flex justify-center mt-10 pb-10">
+                <div className="button-wrapper flex">
                     <Button onClick={onEditClick.bind({}, movie.id)}>
                         edit&nbsp;
                             <i className="fas fa-edit"></i>
