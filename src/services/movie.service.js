@@ -34,7 +34,6 @@ async function query() {
     ]
     const movies = await Promise.all(titles.map(async (title) => {
         const res = await axios.get(`${URL}t=${title}&apikey=${API_KEY}`)
-        // console.log(res.data)
         res.data = _handleData(res.data)
         return res.data
     }))
@@ -168,7 +167,7 @@ const textFields = [
 
 export default {
     query,
-    handleTitle,
     validate,
-    textFields
+    textFields,
+    handleTitle
 }

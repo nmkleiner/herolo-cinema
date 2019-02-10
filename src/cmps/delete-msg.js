@@ -9,7 +9,7 @@ const DeleteMsg = ({ isDeleteMsgOpen, handleClose, handleYes }) => {
   return (
     <React.Fragment>
       <Snackbar
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={isDeleteMsgOpen}
         onClose={handleClose}
         message={<span id="message-id">Are you sure?</span>}

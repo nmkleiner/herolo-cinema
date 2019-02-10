@@ -4,7 +4,8 @@ export default {
     makeLorem,
     getCurrency,
     makeColor,
-    capitalizeStr
+    capitalizeStr,
+    makeAlphaId
 }
 
 
@@ -23,6 +24,16 @@ function makeId(length=5) {
   
     return text;
   }
+
+function makeAlphaId(length=5) {
+    var text = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  
+    for (var i = 0; i < length; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+  
+    return text;
+}
 
 function makeColor() {
     const length = 6

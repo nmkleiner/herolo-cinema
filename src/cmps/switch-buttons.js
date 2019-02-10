@@ -28,17 +28,17 @@ class SwitchButtons extends Component {
     return (
       <div className="switch-buttons">
         <button
-          className={showMoviesDetails ? 'chosen' : ''}
-          onClick={this.chooseBtn.bind(this, 1)}
-        >
-          <i className="fas fa-list"></i>
-        </button>
-
-        <button
           className={!showMoviesDetails ? 'chosen' : ''}
           onClick={this.chooseBtn.bind(this, 2)}
         >
           <i className="fas fa-th"></i>
+        </button>
+
+        <button
+          className={showMoviesDetails ? 'chosen' : ''}
+          onClick={this.chooseBtn.bind(this, 1)}
+        >
+          <i className="fas fa-list"></i>
         </button>
       </div>
 
@@ -56,7 +56,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onOpenDetailsclick: () => {
-      dispatch(actionCreator.openMovieDetails())
+      dispatch(actionCreator.openMoviesDetails())
     },
     onCloseDetailsclick: () => {
       dispatch(actionCreator.closeMovieDetails())

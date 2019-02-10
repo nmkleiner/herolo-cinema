@@ -14,7 +14,7 @@ const MoviePreview = ({ movie, openMovieDetails }) => {
 
             <div className="img-wrapper" onClick={openMovieDetails.bind(this, movie.id)}>
                 <img
-                    src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/${utilService.makeColor()}/FFFFFF/?text=placeholder`}
+                    src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/000000/FFFFFF/?text=placeholder`}
                     alt="movie"
                     className="movie-img d-block"
                 />
@@ -24,12 +24,14 @@ const MoviePreview = ({ movie, openMovieDetails }) => {
                 <span className="title" name={movie.title} >{movie.title}&nbsp;</span>
                 <span>({movie.year})</span>
             </div>
-
+            {
+                        movie.rank &&
             <div className="text-wrapper">
                 <div title={`${movie.reviewCount} people ranked gave this movie an average rank of ${movie.rank} stars.`} >
                     <StarRatingComponent value={movie.rank} />
                 </div>
             </div>
+            }
         </div>
     )
 }

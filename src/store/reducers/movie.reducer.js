@@ -30,7 +30,7 @@ const movieReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     selectedMovie: {
-                        id: utilService.makeId(6),
+                        id: utilService.makeAlphaId(6),
                         title: '',
                         year: '',
                         director: '',

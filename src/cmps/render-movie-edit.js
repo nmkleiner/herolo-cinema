@@ -7,8 +7,8 @@ import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const RenderMovieEdit = ({props}) => {
-    const {movie,isWorking,isClosing,addMovie,textFields,onSubmit,onClose} = props
+const RenderMovieEdit = ({ props }) => {
+    const { movie, isWorking, isClosing, addMovie, textFields, onSubmit, onClose } = props
     return (
         <div className={'movie-edit capitalize animated ' + (isClosing ? 'fadeOut' : 'fadeIn')} >
             <div className="modal-screen" onClick={onClose}></div>
@@ -44,7 +44,7 @@ const RenderMovieEdit = ({props}) => {
                             >
                                 <MenuItem value="" disabled>
                                     Genre
-                                    </MenuItem>
+                                </MenuItem>
                                 {field.genres.map(genre =>
                                     <MenuItem key={genre} value={genre}>
                                         {genre}

@@ -2,18 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreator from '../store/actions/actions'
 import Button from '@material-ui/core/Button';
-import utilService from '../services/util.service';
 import StarRatingComponent from './StarRatingComponent';
 
 const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
     
     return (
-        <div className='movie-preview details flex capitalize'>
+        <div className='movie-preview row flex capitalize'>
 
             <a name={movie.title} className="anchor hidden" href="#as" id={movie.id}>anchor</a>
 
             <img
-                src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/${utilService.makeColor()}/FFFFFF/?text=placeholder`}
+                src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/000000/FFFFFF/?text=placeholder`}
                 alt="movie"
                 className="movie-img d-block"
             />
@@ -23,11 +22,17 @@ const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
                     <span>({movie.year})</span>
                     <p className="bold">{movie.runtime}min</p>
                     <p className="capitalize bold">by {movie.director}</p>
-                    <p className="capitalize">Stars: {movie.actors}</p>
+                    {
+                        movie.actors &&
+                        <p className="capitalize">Stars: {movie.actors}</p>
+                    }
                     <p>Genres: {movie.genres.map((genre, i) => i === movie.genres.length - 1 ? <span key={i}>{genre}</span> : <span key={i}>{genre}, </span>)}.</p>
-                    <div title={`${movie.reviewCount} people ranked gave this movie an average rank of ${movie.rank} stars.`} >
+                    {
+                        movie.rank &&
+                    <div title={`${movie.reviewCount} people gave this movie an average rank of ${movie.rank} stars.`} >
                         <StarRatingComponent value={movie.rank} />
                     </div>
+                    }
                 </div>
 
 

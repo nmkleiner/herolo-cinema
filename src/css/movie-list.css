@@ -2,7 +2,6 @@
     top: calc(100vh - 42px);
     color: black;
     z-index: 1;
-    opacity: 0.8;
     left: 2px;
     justify-self: flex-start;
 }

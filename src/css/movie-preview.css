@@ -1,8 +1,8 @@
 .movie-preview {
-    margin: 15px 6px;
+    margin: 1.7vw;
     border-bottom: 1px solid silver;
     position: relative;
-    width: 143px;
+    width: 45vw;
     border: 1px solid;
     background-color: #fefefe;
 }
@@ -36,8 +36,8 @@
 
 .movie-preview .movie-img {
     transition: 0.3s ease-in-out;
-    width: 140px;
-    height: 200px;
+    width: calc(45vw - 3px);
+    height: 65vw;
     max-width: 100%;
     object-fit: cover;
 }
@@ -59,14 +59,12 @@
     .movie-preview {
         width: 203px;
         margin: 20px;
-
     }
 
     .movie-preview .movie-img {
         width: 200px;
         height: 300px;
     }
-
 }
 
 
@@ -78,7 +76,7 @@
 
 
 
-.movie-preview.details {
+.movie-preview.row {
     display: flex;
     width: 100%;
     margin: 0;   
@@ -87,51 +85,45 @@
     padding-left:10px;
 }
 
-.movie-preview.details .movie-img {
+.movie-preview.row .movie-img {
     width: 150px;
     height: 200px;
     margin: 10px 10px 10px 0;   
 }
 
-.movie-preview.details .movie-img:hover {
+.movie-preview.row .movie-img:hover {
     transform: none;
 }
 
-.details-buttons-wrapper {
+.row-buttons-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px 0 10px 0;   
+    margin: 10px 0;   
     justify-content: space-between;
 }
 
-.movie-preview.details .button-wrapper {
+.movie-preview.row .button-wrapper {
     padding: 0;    
 }
 
 @media (min-width: 768px) {
-    .movie-preview.details {
+    .movie-preview.row {
         justify-content: center;
     }
     
-    .movie-preview.details .movie-img {
-        width: 150px;
-        height: 200px;
-        margin: 10px 40px 10px 0;   
-    }
-    
-    .details-buttons-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: unset;
-    }
-    
-    .movie-preview.details .details-wrapper {
+    .movie-preview.row .movie-img {
         width: 200px;
+        height: 300px;
+        margin: 20px 60px 20px 0;
+    }
+    .row-buttons-wrapper {
+        margin: 20px 0;
+
     }
     
-    .movie-preview.details .button-wrapper {
-        align-self: flex-end;
+    .movie-preview.row .details-wrapper {
+        width: 200px;
     }
 }
     
