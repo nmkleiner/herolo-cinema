@@ -1,12 +1,17 @@
 .nav-bar {
-    background-color: darkcyan;
+    background-color: #412d00;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 5px solid silver;
+    border-bottom: 5px solid rgb(182, 150, 107);
     padding: 10px;
     font-family: 'Baloo', cursive;
     font-size: 1.2rem;
-    margin-bottom: 50px;
+    color: #ffb400;
 }
 
+@media (min-width: 768px) {
+    .nav-bar {
+        margin-bottom: 50px;
+    }
+}

@@ -37,6 +37,14 @@ export const openTitleList = () => ({ type: 'OPEN_TITLE_LIST' })
 
 export const closeTitleList = () => ({ type: 'CLOSE_TITLE_LIST' })
 
-export const openMovieDetails = () => ({ type: 'OPEN_MOVIE_DETAILS' })
+export const openMovieDetails = (id) => {
+    setTimeout(() => {
+        const el = document.querySelector(`#${id}`)
+        el.scrollIntoView({block: 'start'})
+    },0)
+    return { type: 'OPEN_MOVIES_DETAILS' }
+}
+
+export const openMoviesDetails = () => ({ type: 'OPEN_MOVIES_DETAILS' })
 
 export const closeMovieDetails = () => ({ type: 'CLOSE_MOVIE_DETAILS' })

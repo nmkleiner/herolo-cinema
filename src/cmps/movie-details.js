@@ -10,7 +10,7 @@ const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
     return (
         <div className='movie-preview details flex capitalize'>
 
-            <a name={movie.title} className="anchor hidden" href="#as">anchor</a>
+            <a name={movie.title} className="anchor hidden" href="#as" id={movie.id}>anchor</a>
 
             <img
                 src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/${utilService.makeColor()}/FFFFFF/?text=placeholder`}
@@ -22,7 +22,8 @@ const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
                     <h4 className="title" name={movie.title} title={movie.title} >{movie.title}</h4>
                     <span>({movie.year})</span>
                     <p className="bold">{movie.runtime}min</p>
-                    <p className="capitalize bold" title={'Movie by ' + movie.director}>by {movie.director}</p>
+                    <p className="capitalize bold">by {movie.director}</p>
+                    <p className="capitalize">Stars: {movie.actors}</p>
                     <p>Genres: {movie.genres.map((genre, i) => i === movie.genres.length - 1 ? <span key={i}>{genre}</span> : <span key={i}>{genre}, </span>)}.</p>
                     <div title={`${movie.reviewCount} people ranked gave this movie an average rank of ${movie.rank} stars.`} >
                         <StarRatingComponent value={movie.rank} />

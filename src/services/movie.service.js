@@ -49,6 +49,7 @@ function _handleData(data) {
     data.genres = data.Genre.split(',')
     data.genres = data.genres.map(genre => genre.trim())
     data.year = data.Year
+    data.actors = data.Actors
     data.director = data.Director
     data.rank = Math.round(+data.imdbRating) / 2
     data.reviewCount = utilService.getRandomInt(100, 1300)
@@ -62,6 +63,7 @@ function _handleData(data) {
             prop !== 'year' &&
             prop !== 'director' &&
             prop !== 'rank' &&
+            prop !== 'actors' &&
             prop !== 'reviewCount' &&
             prop !== 'imgUrl' 
 

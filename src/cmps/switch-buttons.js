@@ -24,18 +24,18 @@ class SwitchButtons extends Component {
   }
 
   render() {
-    const {showMovieDetails} = this.props
+    const {showMoviesDetails} = this.props
     return (
       <div className="switch-buttons">
         <button
-          className={showMovieDetails ? 'chosen' : ''}
+          className={showMoviesDetails ? 'chosen' : ''}
           onClick={this.chooseBtn.bind(this, 1)}
         >
           <i className="fas fa-list"></i>
         </button>
 
         <button
-          className={!showMovieDetails ? 'chosen' : ''}
+          className={!showMoviesDetails ? 'chosen' : ''}
           onClick={this.chooseBtn.bind(this, 2)}
         >
           <i className="fas fa-th"></i>
@@ -49,7 +49,7 @@ class SwitchButtons extends Component {
 
 function mapStateToProps(state) {
   return {
-    showMovieDetails: state.showMovieDetails,
+    showMoviesDetails: state.showMoviesDetails,
   }
 }
 

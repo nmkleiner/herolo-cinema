@@ -6,12 +6,12 @@ class MovieList extends Component {
 
 
     render() {
-        const { movies,showMovieDetails } = this.props
+        const { movies,showMoviesDetails } = this.props
         return (
             <div className="movie-list">
                 {
                     movies.map((movie, idx) => 
-                            showMovieDetails? 
+                            showMoviesDetails? 
                             <MovieDetails movie={movie} key={idx} /> 
                             :
                             <MoviePreview movie={movie} key={idx} />
@@ -27,7 +27,7 @@ class MovieList extends Component {
 function mapStateToProps(state) {
     return {
       movies: state.movies,
-      showMovieDetails: state.showMovieDetails
+      showMoviesDetails: state.showMoviesDetails
     }
   }
   

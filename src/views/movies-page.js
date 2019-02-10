@@ -30,7 +30,7 @@ class MoviesPage extends Component {
         <div className="container">
           <div className={selectedMovie.id ? 'top-wrapper' : 'top-wrapper sticky'}>
             <h3 onClick={openTitleList} className="capitalize pointer">
-              <i className="fas fa-bars"></i>&nbsp;
+              <i className="fas fa-bars"></i>
               
             </h3>
             <div className={'buttons-wrapper'}>

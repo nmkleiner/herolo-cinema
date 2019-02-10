@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <header className="nav-bar">
             <div className="container flex">
-                <span className="capitalize white-text">Herolo Cinema</span>
+                <span className="capitalize">Herolo Cinema</span>
             </div>
         </header>
 

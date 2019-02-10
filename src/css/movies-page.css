@@ -29,11 +29,10 @@
 
 .movies-page .top-wrapper.sticky {
     position: sticky;
-    top: -2px;
+    top: 0;
     z-index: 1;
     background-color: #fff;
-    border: 1px solid silver;
-    border-top-color: transparent;
+    border-bottom: 1px solid silver;
 }
 
 @media (min-width: 768px) {
