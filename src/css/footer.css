@@ -1,10 +1,10 @@
 .footer {
-    background-color: #555;
+    background-color: #1b1300;
     padding: 50px 10px;
 }
 
 .footer small {
     font-size: 0.8rem;
-    color: white;
+    color: #ffb400;
     font-family: 'Pacifico'
-}
+}  
