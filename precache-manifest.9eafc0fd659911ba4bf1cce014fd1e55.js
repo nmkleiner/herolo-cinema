@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/roboto-latin-500.de8b7431.woff"
   },
   {
-    "revision": "f1d8811b07e851e8ec51",
-    "url": "/herolo-cinema/static/css/main.40945287.chunk.css"
+    "revision": "8e463a9001bf1d7d8b92",
+    "url": "/herolo-cinema/static/css/main.f121a1ce.chunk.css"
   },
   {
     "revision": "27603739fe78fee587c7b84873475b61",
@@ -96,28 +96,28 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/roboto-latin-400italic.9680d5a0.woff"
   },
   {
-    "revision": "f1d8811b07e851e8ec51",
-    "url": "/herolo-cinema/static/js/main.f1d8811b.chunk.js"
-  },
-  {
-    "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
-    "url": "/herolo-cinema/static/media/roboto-latin-500italic.ffcc050b.woff"
+    "revision": "8e463a9001bf1d7d8b92",
+    "url": "/herolo-cinema/static/js/main.8e463a90.chunk.js"
   },
   {
     "revision": "510dec37fa69fba39593e01a469ee018",
     "url": "/herolo-cinema/static/media/roboto-latin-500italic.510dec37.woff2"
   },
   {
+    "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
+    "url": "/herolo-cinema/static/media/roboto-latin-500italic.ffcc050b.woff"
+  },
+  {
     "revision": "cf6613d1adf490972c557a8e318e0868",
     "url": "/herolo-cinema/static/media/roboto-latin-700.cf6613d1.woff"
   },
   {
-    "revision": "846d1890aee87fde5d8ced8eba360c3a",
-    "url": "/herolo-cinema/static/media/roboto-latin-700italic.846d1890.woff"
-  },
-  {
     "revision": "010c1aeee3c6d1cbb1d5761d80353823",
     "url": "/herolo-cinema/static/media/roboto-latin-700italic.010c1aee.woff2"
+  },
+  {
+    "revision": "846d1890aee87fde5d8ced8eba360c3a",
+    "url": "/herolo-cinema/static/media/roboto-latin-700italic.846d1890.woff"
   },
   {
     "revision": "8c2ade503b34e31430d6c98aa29a52a3",
@@ -164,16 +164,16 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/media/fa-regular-400.734248d0.svg"
   },
   {
+    "revision": "324944d6dae53ea48a648b1d44ec78c3",
+    "url": "/herolo-cinema/static/media/Pacifico-Regular.324944d6.ttf"
+  },
+  {
     "revision": "f72d546abcc27880adf8428792c72519",
     "url": "/herolo-cinema/static/media/fa-solid-900.f72d546a.eot"
   },
   {
     "revision": "1709a2810c3752483683f3f7d287aa89",
     "url": "/herolo-cinema/static/media/fa-solid-900.1709a281.ttf"
-  },
-  {
-    "revision": "324944d6dae53ea48a648b1d44ec78c3",
-    "url": "/herolo-cinema/static/media/Pacifico-Regular.324944d6.ttf"
   },
   {
     "revision": "ea15dd499397ad9374eb56e2327f6020",
@@ -188,7 +188,7 @@ self.__precacheManifest = [
     "url": "/herolo-cinema/static/css/1.e55dbdcc.chunk.css"
   },
   {
-    "revision": "7df6b0e7f0d5f81e71204aa3801b1d87",
+    "revision": "d9fedca1e16d71ee7be1932ff5d336cd",
     "url": "/herolo-cinema/index.html"
   }
 ];
