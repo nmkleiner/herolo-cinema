@@ -44,9 +44,9 @@ class MovieEdit extends Component {
         const movie = this.state.selectedMovie
         const { isWorking, isClosing, addMovie, textFields } = this.state
         const { onSubmit, onClose } = this.props
-        const renderProps = { movie, isWorking, isClosing, addMovie, textFields, onSubmit: onSubmit.bind(this), onClose: onClose.bind(this) }
+        const props = { movie, isWorking, isClosing, addMovie, textFields, onSubmit: onSubmit.bind(this), onClose: onClose.bind(this) }
         return (
-            <RenderMovieEdit props={renderProps}></RenderMovieEdit>
+            <RenderMovieEdit props={props}></RenderMovieEdit>
         )
     }
 }

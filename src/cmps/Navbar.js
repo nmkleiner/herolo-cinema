@@ -7,7 +7,6 @@ const Navbar = () => {
                 <span className="capitalize">Herolo Cinema</span>
             </div>
         </header>
-
     )
 }
 

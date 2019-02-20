@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MoviePreviewCard from './movie-preview-card';
 import MoviePreviewRow from './movie-preview-row';
 import { connect } from 'react-redux';
-class MovieList extends Component {
 
+const MovieList = ({ movies,showMoviesDetails }) => {
 
-    render() {
-        const { movies,showMoviesDetails } = this.props
         return (
             <div className="movie-list">
                 {
@@ -19,7 +17,6 @@ class MovieList extends Component {
                 }
             </div>
         )
-    }
 }
 
 

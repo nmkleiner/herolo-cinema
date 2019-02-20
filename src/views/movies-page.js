@@ -24,43 +24,43 @@ class MoviesPage extends Component {
       selectedMovie,
       openTitleList
     } = this.props
-
     return (
-      <div className="movies-page">
-        <div className="container">
-          <div className={selectedMovie.id ? 'top-wrapper' : 'top-wrapper sticky'}>
-            <h3 onClick={openTitleList} className="capitalize pointer">
-              <i className="fas fa-bars"></i>
-              
-            </h3>
-            <div className={'buttons-wrapper'}>
-              <SwitchButtons store={store} />
-              <Button color="primary" variant="outlined" onClick={onAddMovieClick}>
-                <i className="fas fa-plus"></i>&nbsp;Add Movie
+
+        <div className="movies-page">
+          <div className="container">
+            <div className={selectedMovie.id ? 'top-wrapper' : 'top-wrapper sticky'}>
+              <h3 onClick={openTitleList} className="capitalize pointer">
+                <i className="fas fa-bars"></i>
+
+              </h3>
+              <div className={'buttons-wrapper'}>
+                <SwitchButtons store={store} />
+                <Button color="primary" variant="outlined" onClick={onAddMovieClick}>
+                  <i className="fas fa-plus"></i>&nbsp;Add Movie
               </Button>
+              </div>
             </div>
+
+            <TitleList store={store} />
+
+            <div className="position-sticky">
+              <Fab
+                size="small"
+                onClick={this.scrollUp}
+                color="primary"
+              >
+                <i className="fas fa-angle-double-up"></i>
+              </Fab>
+            </div>
+
+            <MovieList store={store} />
+
+            {
+              selectedMovie.id &&
+              <MovieEdit store={store} />
+            }
           </div>
-
-          <TitleList store={store} />
-
-          <div className="position-sticky">
-            <Fab
-              size="small"
-              onClick={this.scrollUp}
-              color="primary"
-            >
-              <i className="fas fa-angle-double-up"></i>
-            </Fab>
-          </div>
-
-          <MovieList store={store} />
-
-          {
-            selectedMovie.id &&
-            <MovieEdit store={store} />
-          }
         </div>
-      </div>
     )
   }
 }

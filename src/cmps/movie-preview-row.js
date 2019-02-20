@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import StarRatingComponent from './StarRatingComponent';
 
 const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
-    
+
     return (
         <div className='movie-preview row flex capitalize'>
 
@@ -26,16 +26,19 @@ const MovieDetails = ({ movie, onEditClick, onDeleteMovieClick }) => {
                         movie.actors &&
                         <p className="capitalize">Stars: {movie.actors}</p>
                     }
-                    <p>Genres: {movie.genres.map((genre, i) => i === movie.genres.length - 1 ? <span key={i}>{genre}</span> : <span key={i}>{genre}, </span>)}.</p>
+                    <p>Genres: {movie.genres.map((genre, i) =>
+                        i === movie.genres.length - 1 ?
+                            <span key={i}>{genre}</span> :
+                            <span key={i}>{genre}, </span>
+                    )}.
+                    </p>
                     {
                         movie.rank &&
-                    <div title={`${movie.reviewCount} people gave this movie an average rank of ${movie.rank} stars.`} >
-                        <StarRatingComponent value={movie.rank} />
-                    </div>
+                        <div title={`${movie.reviewCount} people gave this movie an average rank of ${movie.rank} stars.`} >
+                            <StarRatingComponent value={movie.rank} />
+                        </div>
                     }
                 </div>
-
-
 
                 <div className="button-wrapper flex">
                     <Button onClick={onEditClick.bind({}, movie.id)}>

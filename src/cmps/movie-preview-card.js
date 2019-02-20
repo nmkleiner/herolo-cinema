@@ -12,7 +12,9 @@ const MoviePreview = ({ movie, openMovieDetails }) => {
             <a name={movie.title} className="anchor hidden" href="#as">anchor</a>
 
 
-            <div className="img-wrapper" onClick={openMovieDetails.bind(this, movie.id)}>
+            <div className="img-wrapper" 
+            onClick={openMovieDetails.bind(this, movie.id)}
+            >
                 <img
                     src={movie.imgUrl ? movie.imgUrl : `https://via.placeholder.com/200x300/000000/FFFFFF/?text=placeholder`}
                     alt="movie"

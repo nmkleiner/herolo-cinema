@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 const DeleteMsg = ({ isDeleteMsgOpen, handleClose, handleYes }) => {
 
   return (
-    <React.Fragment>
       <Snackbar
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={isDeleteMsgOpen}
@@ -31,7 +30,6 @@ const DeleteMsg = ({ isDeleteMsgOpen, handleClose, handleYes }) => {
         </Button>,
         ]}
       />
-    </React.Fragment>
   )
 }
 

@@ -111,11 +111,6 @@ const movieReducer = (state = initialState, action) => {
                 showMoviesDetails: true
             }
             
-        case 'OPEN_MOVIE_DETAILS':
-            return {
-                ...state,
-                showMoviesDetails: true
-            }
 
         case 'CLOSE_MOVIE_DETAILS':
             return {

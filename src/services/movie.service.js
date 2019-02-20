@@ -16,7 +16,6 @@ async function query() {
         'venom',
         'the wife',
         'robin hood',
-        'shazam',
         'miss bala',
         'a simple favor',
         'cold pursuit',
@@ -132,32 +131,32 @@ function validate() {
 
 const textFields = [
     {
-        type: 'text',
         name: 'title',
+        type: 'text',
         placeholder: 'Movie title',
         label: 'Invalid title.',
     },
     {
-        type: 'text',
         name: 'director',
+        type: 'text',
         placeholder: 'Director',
         label: 'Invalid director.',
     },
     {
-        type: 'number',
         name: 'runtime',
+        type: 'number',
         placeholder: 'Runtime',
         label: 'Invalid runtime.',
     },
     {
-        type: 'number',
         name: 'year',
+        type: 'number',
         placeholder: 'Year released',
         label: 'Invalid year.',
     },
     {
-        type: 'select',
         name: 'genres',
+        type: 'select',
         placeholder: 'Genres',
         label: 'Please choose genres.',
         genres: ['War', 'Sci-Fi', 'Adventure', 'Drama', 'Comedy', 'Romantic', 'Action', 'Fantasy']
