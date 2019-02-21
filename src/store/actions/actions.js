@@ -32,19 +32,3 @@ export const closeDeleteMsg = () => ({ type: 'CLOSE_DELETE_MSG' })
 export const openDeleteMsg = () => ({ type: 'OPEN_DELETE_MSG' })
 
 export const setDeletedMovie = (deletedMovieId) => ({ type: 'SET_DELETED_MOVIE', deletedMovieId })
-
-export const openTitleList = () => ({ type: 'OPEN_TITLE_LIST' })
-
-export const closeTitleList = () => ({ type: 'CLOSE_TITLE_LIST' })
-
-export const openMovieDetails = (id) => {
-    setTimeout(() => {
-        const el = document.querySelector(`#${id}`)
-        el.scrollIntoView({block: 'start'})
-    },0)
-    return { type: 'OPEN_MOVIES_DETAILS' }
-}
-
-export const openMoviesDetails = () => ({ type: 'OPEN_MOVIES_DETAILS' })
-
-export const closeMovieDetails = () => ({ type: 'CLOSE_MOVIE_DETAILS' })

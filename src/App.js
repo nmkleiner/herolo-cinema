@@ -6,6 +6,7 @@ import DeleteMsg from './cmps/delete-msg';
 import Navbar from './cmps/navbar';
 import MoviesPage from './views/movies-page.js';
 import Footer from './cmps/footer';
+import {Provider} from './store/provider.js';
 
 class App extends Component {
   componentDidMount() {
@@ -14,12 +15,14 @@ class App extends Component {
 
   render() {
     return (
-          <div className="App">
-            <DeleteMsg/>
-            <Navbar store={store} />
-            <MoviesPage store={store} />
-            <Footer/>
-          </div>
+      <Provider>
+        <div className="App">
+          <DeleteMsg />
+          <Navbar store={store} />
+          <MoviesPage store={store} />
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 }
